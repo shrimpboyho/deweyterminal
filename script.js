@@ -1,3 +1,4 @@
+
 $(window).load(function(){
 /* SET UP BASH LOGIC*/
 
