@@ -1,3 +1,5 @@
+<script type="text/javascript">//<![CDATA[ 
+$(window).load(function(){
 /* SET UP BASH LOGIC*/
 
 // Set up command line width properties
@@ -45,10 +47,14 @@ function bunzKernel(kernelcmd) {
     }
     if (kernelcmd == "f+") {
         $('#consoleoutput').css('font-size', (parseInt($('#consoleoutput').css('font-size')) + 3));
+        $('#givencommand').css('font-size', (parseInt($('#consoleoutput').css('font-size')) + 3));
+        $('#givencommandcursor').css('font-size', (parseInt($('#consoleoutput').css('font-size')) + 3));
        
     }
     if (kernelcmd == "f-") {
         $('#consoleoutput').css('font-size', (parseInt($('#consoleoutput').css('font-size')) - 3));
+        $('#givencommand').css('font-size', (parseInt($('#consoleoutput').css('font-size')) - 3));
+        $('#givencommandcursor').css('font-size', (parseInt($('#consoleoutput').css('font-size')) - 3));
         
     }
     if (kernelcmd == "flush") {
@@ -56,3 +62,6 @@ function bunzKernel(kernelcmd) {
     }
 
 }
+});//]]>  
+
+</script>
