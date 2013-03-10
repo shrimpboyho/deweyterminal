@@ -1,4 +1,3 @@
-<script type="text/javascript">//<![CDATA[ 
 $(window).load(function(){
 /* SET UP BASH LOGIC*/
 
@@ -62,6 +61,4 @@ function bunzKernel(kernelcmd) {
     }
 
 }
-});//]]>  
-
-</script>
+});
