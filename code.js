@@ -1,4 +1,3 @@
-
 $(window).load(function(){
 /* SET UP BASH LOGIC*/
 
@@ -44,6 +43,7 @@ function bunzKernel(kernelcmd) {
 
     if (kernelcmd == "help") {
         $("#consoleoutput").val($("#consoleoutput").val() + "\n\n==============================================================\nHello, I'm the Open8 Bash! Pipe. Here are a list of commands you can run:\n\n-> flush\n\tClears the bash screen\n-> redubs\n-> launch\n-> f+\n\tIncrease bash font-size\n-> f-\n\tDecrease bash font-size");
+        bunzKernel("scrollbottom");
     }
     if (kernelcmd == "f+") {
         $('#consoleoutput').css('font-size', (parseInt($('#consoleoutput').css('font-size')) + 3));
@@ -59,6 +59,9 @@ function bunzKernel(kernelcmd) {
     }
     if (kernelcmd == "flush") {
         $('#consoleoutput').val("");
+    }
+    if (kernelcmd == "scrollbottom") {
+      $('#consoleoutput').scrollTop($('#consoleoutput')[0].scrollHeight);  
     }
 
 }
