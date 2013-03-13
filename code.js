@@ -76,7 +76,7 @@ function bunzKernel(kernelcmd) {
       var hexGiven = kernelcmd.split("#");
       $('body').css("background", hexGiven[1]);
       $('html').css("background", hexGiven[1]);
-      
+      $('#consoleoutput').css("background", hexGiven[1]);
     }
 
 }
