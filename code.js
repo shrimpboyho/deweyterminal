@@ -72,7 +72,11 @@ function bunzKernel(kernelcmd) {
       $('#consoleoutput').scrollTop($('#consoleoutput')[0].scrollHeight);  
     }
     if (colorRegex.test(kernelcmd)) {
-      alert("Regex Match");
+      
+      var hexGiven = kernelcmd.split("#");
+      $('body').css("background", hexGiven[1]);
+      $('html').css("background", hexGiven[1]);
+      
     }
 
 }
