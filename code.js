@@ -1,5 +1,6 @@
 $(window).load(function(){
-/* SET UP BASH LOGIC*/
+
+/* SET UP TERMINAL LOGIC*/
 
 // Set up command line width properties
 
@@ -41,6 +42,13 @@ $(document).keypress(function (e) {
 
 function bunzKernel(kernelcmd) {
 
+    
+    // Set up Regex expressions (redundant) :)
+    
+    var colorRegex = /color #.{6}/;
+    
+    
+    
     if (kernelcmd == "help") {
         $("#consoleoutput").val($("#consoleoutput").val() + "\n\n==============================================================\nHello, I'm the Open8 Bash! Pipe. Here are a list of commands you can run:\n\n-> flush\n\tClears the bash screen\n-> redubs\n-> launch\n-> f+\n\tIncrease bash font-size\n-> f-\n\tDecrease bash font-size");
         bunzKernel("scrollbottom");
@@ -62,6 +70,9 @@ function bunzKernel(kernelcmd) {
     }
     if (kernelcmd == "scrollbottom") {
       $('#consoleoutput').scrollTop($('#consoleoutput')[0].scrollHeight);  
+    }
+    if (colorRegex.test(kernelcmd)) {
+      alert("Regex Match");
     }
 
 }
