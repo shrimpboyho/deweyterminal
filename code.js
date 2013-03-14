@@ -65,19 +65,36 @@ function bunzKernel(kernelcmd) {
         $('body').css('font-size', (parseInt($('#consoleoutput').css('font-size')) - 3));
         
     }
+    
+    // Check to see if flush command is entered
+    
     if (kernelcmd == "flush") {
         $('#consoleoutput').val("");
     }
+    
+    // A private kernel only function
+    
     if (kernelcmd == "scrollbottom") {
       $('#consoleoutput').scrollTop($('#consoleoutput')[0].scrollHeight);  
     }
-    if (colorRegex.test(kernelcmd)) {
-      
-      var hexGiven = kernelcmd.split("#");
-      $('body').css("background", hexGiven[1]);
-      $('html').css("background", hexGiven[1]);
-      $('#consoleoutput').css("background", hexGiven[1]);
-    }
+    
+    /* Logic for the color commands */
+    
+        if (colorRegex.test(kernelcmd)) {
+          
+          var hexGiven = kernelcmd.split("#");
+          $('body').css("background", hexGiven[1]);
+          $('html').css("background", hexGiven[1]);
+          $('#consoleoutput').css("background", hexGiven[1]);
+          
+        }
+        
+        if (kernelcmd == "color") {
+          
+          $("#consoleoutput").val($("#consoleoutput").val() + "\nPlease specify a Hex code value to go along with that such as:\n\tcolor #212332");
+          bunzKernel("scrollbottom");
+         
+        }
 
 }
 });
