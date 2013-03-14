@@ -46,6 +46,7 @@ function bunzKernel(kernelcmd) {
     // Set up Regex expressions (redundant) :)
     
     var colorRegex = /color #.{6}/;
+    var launchRegex = /launch .+/;
     
     
     
@@ -95,6 +96,15 @@ function bunzKernel(kernelcmd) {
           bunzKernel("scrollbottom");
          
         }
+    
+    // Logic for the launch command
+    
+    if (launchRegex.test(kernelcmd)) {
+          
+          var launchGiven = kernelcmd.split(" ");
+          window.open(launchGiven[1]);
+         
+    }
 
 }
 });
