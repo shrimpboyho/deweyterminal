@@ -55,9 +55,9 @@ function bunzKernel(kernelcmd) {
         var colorRegex = /color #.{6}/;
         var launchRegex = /launch .+/;
         
-        for(loadCounter = 0; loadCounter <= 100; loadCounter++)
-            $("#consoleoutput").val($("#consoleoutput").val() + "\nInitializing Regex..." + loadCounter + "%";
-        
+        for(loadCounter = 0; loadCounter <= 100; loadCounter++){
+            $("#consoleoutput").val($("#consoleoutput").val() + "\nInitializing Regex..." + loadCounter + "%");
+        }
     }
     
     if (kernelcmd == "help") {
