@@ -20,6 +20,7 @@ var fOut = function () {
 };
 fIn();
 
+
 // Set up the action of the enter key and capture current command
 
 $(document).keypress(function (e) {
@@ -56,12 +57,19 @@ function bunzKernel(kernelcmd) {
     if(kernelcmd == "initregex"){
         
         var loadCounter; // Count the load
-        
+       
+         
         for(loadCounter = 0; loadCounter <= 100; loadCounter++){
             $("#consoleoutput").val("\nInitializing Regex..." + loadCounter + "%");
         }
         
         bunzKernel("scrollbottom");
+
+    }
+    
+    if(kernelcmd == "delay"){
+        
+      //Shit needs to go here
 
     }
     
