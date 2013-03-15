@@ -38,17 +38,27 @@ $(document).keypress(function (e) {
     }
 });
 
+//  Initialize the kernel databases
+
+bunzKernel("initregex");
+
 //Set up kernel function
 
 function bunzKernel(kernelcmd) {
-
     
-    // Set up Regex expressions (redundant) :)
+    if(kernelcmd == "initregex"){
+        
+        var loadCounter; // Count the load
     
-    var colorRegex = /color #.{6}/;
-    var launchRegex = /launch .+/;
+        // Set up Regex expressions (redundant) :)
     
-    
+        var colorRegex = /color #.{6}/;
+        var launchRegex = /launch .+/;
+        
+        for(loadCounter = 0; loadCounter <= 100; loadCounter++ ){
+            $("#consoleoutput").val($("#consoleoutput").val() + "\nInitializing Regex..." + loadCounter "%";
+        }
+    }
     
     if (kernelcmd == "help") {
         $("#consoleoutput").val($("#consoleoutput").val() + "\n\n==============================================================\nHello, I'm the Dewey Terminal! Pipe. Here are a list of commands you can run:\n\n-> flush\n\tClears the bash screen\n-> redubs\n-> launch\n-> f+\n\tIncrease bash font-size\n-> f-\n\tDecrease bash font-size\n-> color #HEXCODE\n\tChanges the background of the terminal.");
