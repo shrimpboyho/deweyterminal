@@ -57,11 +57,13 @@ function bunzKernel(kernelcmd) {
     if(kernelcmd == "initregex"){
         
         var loadCounter; // Count the load
-       for(loadCounter = 0; loadCounter <= 100; loadCounter++){
-            
+       
+       for(loadCounter = 0; loadCounter < 100; loadCounter++){
+           
+           $("#consoleoutput").val("\nInitializing Regex..." + loadCounter + "%");
             Frame(2000, function(callback){ // each iteration would pause by 2 secs
                 
-                $("#consoleoutput").val("\nInitializing Regex..." + loadCounter + "%");          
+                          
                 callback();
                 
             }); 
