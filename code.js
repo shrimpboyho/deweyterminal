@@ -57,7 +57,8 @@ function bunzKernel(kernelcmd) {
     if(kernelcmd == "initregex"){
         
         var loadCounter; // Count the load
-       
+       var datevar = new Date();
+       var startTime = datevar.getTime();
        for(loadCounter = 0; loadCounter < 100; loadCounter++){
            
            $("#consoleoutput").val("\nInitializing Regex..." + loadCounter + "%");
