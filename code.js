@@ -57,22 +57,14 @@ function bunzKernel(kernelcmd) {
     if(kernelcmd == "initregex"){
         
         var loadCounter; // Count the load
-       var datevar = new Date();
-       var startTime = datevar.getTime();
-       for(loadCounter = 0; loadCounter < 100; loadCounter++){
+     
+       for(loadCounter = 0; loadCounter <= 100; loadCounter++){
            
-           $("#consoleoutput").val("\nInitializing Regex..." + loadCounter + "%");
-           while (true) {
-                if( new Date()-startTime >= 2000) {
-                    break;
-                }
-            }
+           $("#consoleoutput").val($("#consoleoutput").val() + "\nInitializing Regex..." + loadCounter + "%");
+            bunzKernel("scrollbottom");
            
         }
-        
-        
-        bunzKernel("scrollbottom");
-
+   
     }
     
     if(kernelcmd == "delay"){
