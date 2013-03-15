@@ -57,8 +57,8 @@ function bunzKernel(kernelcmd) {
         
         for(loadCounter = 0; loadCounter <= 100; loadCounter++){
             $("#consoleoutput").val("\nInitializing Regex..." + loadCounter + "%");
-            bunzKernel("scrollbottom");
         }
+        bunzKernel("scrollbottom");
     }
     
     if (kernelcmd == "help") {
