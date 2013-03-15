@@ -49,16 +49,17 @@ function bunzKernel(kernelcmd) {
     if(kernelcmd == "initregex"){
         
         var loadCounter; // Count the load
-    
-        // Set up Regex expressions (redundant) :)
-    
-        var colorRegex = /color #.{6}/;
-        var launchRegex = /launch .+/;
         
         for(loadCounter = 0; loadCounter <= 100; loadCounter++){
             $("#consoleoutput").val("\nInitializing Regex..." + loadCounter + "%");
         }
+        
         bunzKernel("scrollbottom");
+           
+        // Set up Regex expressions (redundant) :)
+    
+        var colorRegex = /color #.{6}/;
+        var launchRegex = /launch .+/;
     }
     
     if (kernelcmd == "help") {
