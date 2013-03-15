@@ -56,7 +56,7 @@ function bunzKernel(kernelcmd) {
         var launchRegex = /launch .+/;
         
         for(loadCounter = 0; loadCounter <= 100; loadCounter++ ){
-            $("#consoleoutput").val($("#consoleoutput").val() + "\nInitializing Regex..." + loadCounter "%";
+            $("#consoleoutput").val($("#consoleoutput").val() + "\nInitializing Regex..." + loadCounter + "%";
         }
     }
     
