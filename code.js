@@ -120,14 +120,21 @@ function bunzKernel(kernelcmd) {
          
         }
     
-    // Logic for the launch command
+    /* Logic for the launch commands */
     
-    if (launchRegex.test(kernelcmd)) {
+        if (launchRegex.test(kernelcmd)) {
+              
+              var launchGiven = kernelcmd.split(" ");
+              window.open(launchGiven[1]);
+             
+        }
+
+        if (kernelcmd == "color") {
           
-          var launchGiven = kernelcmd.split(" ");
-          window.open(launchGiven[1]);
+          $("#consoleoutput").val($("#consoleoutput").val() + "\nPlease specify a URL value to go along with that such as:\n\tlaunch https://google.com");
+          bunzKernel("scrollbottom");
          
-    }
+        }
 
 }
 });
