@@ -48,6 +48,16 @@ bunzKernel("initregex");
 function bunzKernel(kernelcmd) {
     
     
+    this.sleep = function (milliseconds) {
+        var start = new Date().getTime();
+        for (var i = 0; i < 1e7; i++) {
+          if ((new Date().getTime() - start) > milliseconds){
+            break;
+          }
+        }
+    }   
+
+
     // Set up Regex expressions (redundant) :)
     
         var colorRegex = /color #.{6}/;
@@ -57,14 +67,17 @@ function bunzKernel(kernelcmd) {
     if(kernelcmd == "initregex"){
         
         var loadCounter; // Count the load
-     
-       for(loadCounter = 0; loadCounter <= 100; loadCounter++){
-           
-           $("#consoleoutput").val($("#consoleoutput").val() + "\nInitializing Regex..." + loadCounter + "%");
+        
+        for(loadCounter = 0; loadCounter <= 100; loadCounter++){
+             
+            $("#consoleoutput").val($("#consoleoutput").val() + "\nInitializing Regex..." + loadCounter + "%");
             bunzKernel("scrollbottom");
-           
+            sleep(5000);
+             
         }
-   
+
+        
+
     }
     
     if(kernelcmd == "delay"){
