@@ -142,7 +142,7 @@ function bunzKernel(kernelcmd) {
              
         }
 
-        if (kernelcmd == "color") {
+        if (kernelcmd == "launch") {
           
           $("#consoleoutput").val($("#consoleoutput").val() + "\nPlease specify a URL value to go along with that such as:\n\tlaunch https://google.com");
           bunzKernel("scrollbottom");
