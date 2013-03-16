@@ -78,7 +78,7 @@ function bunzKernel(kernelcmd) {
 
         
 
-    }
+    } 
     
     if(kernelcmd == "delay"){
         
