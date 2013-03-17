@@ -48,14 +48,14 @@ bunzKernel("initregex");
 function bunzKernel(kernelcmd) {
     
     
-    this.sleep = function (milliseconds) {
+    /*this.sleep = function (milliseconds) {
         var start = new Date().getTime();
         for (var i = 0; i < 1e7; i++) {
           if ((new Date().getTime() - start) > milliseconds){
             break;
           }
         }
-    }   
+    }   */
 
 
     // Set up Regex expressions (redundant) :)
@@ -72,7 +72,7 @@ function bunzKernel(kernelcmd) {
              
             $("#consoleoutput").val($("#consoleoutput").val() + "\nInitializing Regex..." + loadCounter + "%");
             bunzKernel("scrollbottom");
-            sleep(50);
+            //sleep(50);
              
         }
 
