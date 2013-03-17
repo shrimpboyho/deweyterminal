@@ -72,7 +72,7 @@ function bunzKernel(kernelcmd) {
              
             $("#consoleoutput").val($("#consoleoutput").val() + "\nInitializing Regex..." + loadCounter + "%");
             bunzKernel("scrollbottom");
-            sleep(5000);
+            sleep(50);
              
         }
 
