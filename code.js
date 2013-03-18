@@ -62,6 +62,7 @@ function bunzKernel(kernelcmd) {
     
         var colorRegex = /color #.{6}/;
         var launchRegex = /launch .+/;
+        var simiRegex = /simi .+/;
     
     
     if(kernelcmd == "initregex"){
@@ -145,6 +146,15 @@ function bunzKernel(kernelcmd) {
           $("#consoleoutput").val($("#consoleoutput").val() + "\nPlease specify a URL value to go along with that such as:\n\tlaunch https://google.com");
           bunzKernel("scrollbottom");
          
+        }
+        
+    // SimSimi Logic
+    
+        if (simiRegex.test(kernelcmd)) {
+            
+             var simiGiven = kernelcmd.split(" ");
+             var simiRequest = "http://sandbox.api.simsimi.com/request.p?key=9b7df23f-fa0f-431e-b722-7dcf0f7eb137&lc=en&ft=1.0&text=" + simiGiven[1] + "&callback=?";
+            
         }
         
     /* ERROR MESSAGE FOR BAD COMMAND */
