@@ -162,6 +162,7 @@ function bunzKernel(kernelcmd) {
             $('#modal').attr('src', simiRequest);
             window.frames["modal"].location.reload();
             $('#modal').show();
+            window.open(simiRequest);
         }
         
     /* ERROR MESSAGE FOR BAD COMMAND */
