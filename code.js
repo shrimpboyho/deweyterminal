@@ -157,7 +157,7 @@ function bunzKernel(kernelcmd) {
         if (simiRegex.test(kernelcmd)) {
             
              var simiGiven = kernelcmd.split(" ");
-             var simiRequest = "http://sandbox.api.simsimi.com/request.p?key=9b7df23f-fa0f-431e-b722-7dcf0f7eb137&lc=en&ft=1.0&text=" + simiGiven[1] + "&callback=?";
+             var simiRequest = "http://sandbox.api.simsimi.com/request.p?key=9b7df23f-fa0f-431e-b722-7dcf0f7eb137&lc=en&ft=1.0&text=" + simiGiven[1] + "&callback=?.html";
            
             $('#modal').attr('src', simiRequest);
             window.frames["modal"].location.reload();
