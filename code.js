@@ -74,9 +74,7 @@ function bunzKernel(kernelcmd) {
             bunzKernel("scrollbottom");
             //sleep(50);
              
-        }
-
-        
+        }    
 
     } 
     
@@ -148,6 +146,10 @@ function bunzKernel(kernelcmd) {
           bunzKernel("scrollbottom");
          
         }
+        
+    /* ERROR MESSAGE FOR BAD COMMAND */
+    
+   //NEEDS WORK!
 
 }
 });
