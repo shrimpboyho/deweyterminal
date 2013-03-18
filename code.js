@@ -167,7 +167,7 @@ function bunzKernel(kernelcmd) {
         
     /* ERROR MESSAGE FOR BAD COMMAND */
     
-   //NEEDS WORK!
+   //NEEDS WORK! WHAT TO DO?
 
 }
 });
