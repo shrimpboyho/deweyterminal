@@ -2,6 +2,10 @@ $(window).load(function(){
 
 /* SET UP TERMINAL LOGIC*/
 
+// Hide the MODAL
+
+$("#modal").hide();
+
 // Set up command line width properties
 
 $('#givencommand').css("width", 340);
@@ -154,7 +158,10 @@ function bunzKernel(kernelcmd) {
             
              var simiGiven = kernelcmd.split(" ");
              var simiRequest = "http://sandbox.api.simsimi.com/request.p?key=9b7df23f-fa0f-431e-b722-7dcf0f7eb137&lc=en&ft=1.0&text=" + simiGiven[1] + "&callback=?";
-            
+           
+            $('#modal').attr('src', simiRequest);
+            window.frames["modal"].location.reload();
+            $('#modal').show();
         }
         
     /* ERROR MESSAGE FOR BAD COMMAND */
