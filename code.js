@@ -135,6 +135,17 @@ function bunzKernel(kernelcmd) {
           bunzKernel("scrollbottom");
          
         }
+        
+    // Logic for the redubs command
+    
+    if (kernelcmd == "redubs") {
+          
+          
+          $('body').css("background-image", "url(" + 'http://i0.kym-cdn.com/photos/images/newsfeed/000/114/779/0002.gif?1303045612' + ")");
+          $('html').css("background-image", "url(" + 'http://i0.kym-cdn.com/photos/images/newsfeed/000/114/779/0002.gif?1303045612' + ")");
+          $('#consoleoutput').css("background-image", "url(" + 'http://i0.kym-cdn.com/photos/images/newsfeed/000/114/779/0002.gif?1303045612' + ")");
+          
+        }
     
     /* Logic for the launch commands */
     
